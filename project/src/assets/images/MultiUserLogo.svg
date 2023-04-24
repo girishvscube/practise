@@ -1,0 +1,42 @@
+<svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                           
+                          
+                          >
+                            <path
+                              fillRule="evenodd"
+                              clipRule="evenodd"
+                              d="M7.59298 13.207C11.282 13.207 14.435 13.766 14.435 15.999C14.435 18.232 11.303 18.807 7.59298 18.807C3.90298 18.807 0.750977 18.253 0.750977 16.019C0.750977 13.785 3.88198 13.207 7.59298 13.207Z"
+                              stroke="#FE9705"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              fillRule="evenodd"
+                              clipRule="evenodd"
+                              d="M7.59205 10.02C5.17005 10.02 3.20605 8.057 3.20605 5.635C3.20605 3.213 5.17005 1.25 7.59205 1.25C10.0131 1.25 11.9771 3.213 11.9771 5.635C11.9861 8.048 10.0361 10.011 7.62305 10.02H7.59205Z"
+                              stroke="#FE9705"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M14.4854 8.88177C16.0864 8.65677 17.3194 7.28277 17.3224 5.61977C17.3224 3.98077 16.1274 2.62077 14.5604 2.36377"
+                              stroke="#FE9705"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                            <path
+                              d="M16.5967 12.7324C18.1477 12.9634 19.2307 13.5074 19.2307 14.6274C19.2307 15.3984 18.7207 15.8984 17.8967 16.2114"
+                              stroke="#FE9705"
+                              strokeWidth="1.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>

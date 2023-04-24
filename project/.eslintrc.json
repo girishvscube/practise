@@ -1,0 +1,108 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "airbnb",
+        "airbnb-typescript"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "tsx": true
+        },
+        "ecmaVersion": 2020,
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "plugins": [
+        "react"
+    ],
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".js",
+                    ".jsx",
+                    ".ts",
+                    ".tsx"
+                ],
+                "paths": [
+                    "src"
+                ]
+            }
+        }
+    },
+    "rules": {
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "react/react-in-jsx-scope": "off",
+        "react/destructuring-assignment": "off",
+        "comma-dangle": "off",
+        "arrow-parens": "off",
+        "prefer-destructuring": "off",
+        "object-curly-newline": "off",
+        "camelcase": "off",
+        "react/no-multi-comp": "off",
+        "react/no-did-update-set-state": "off",
+        "react/sort-comp": "off",
+        "react/display-name": "error",
+        "react/no-return-assign": "off",
+        "no-return-assign": "off",
+        "import/order": "off",
+        "react/no-access-state-in-setstate": "off",
+        "react/forbid-prop-types": "off",
+        "implicit-arrow-linebreak": "off",
+        "no-plusplus": "off",
+        "max-len": 0,
+        "import/prefer-default-export": "off",
+        "newline-per-chained-call": "warn",
+        "no-param-reassign": "off",
+        "react/prop-types": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-use-before-define": "off",
+        "import/extensions": "off",
+        "react/jsx-no-bind": "off",
+        "jsx-a11y/label-has-associated-control": [
+            "error",
+            {
+                "required": {
+                    "some": [
+                        "nesting",
+                        "id"
+                    ]
+                }
+            }
+        ],
+        "jsx-a11y/label-has-for": [
+            "error",
+            {
+                "required": {
+                    "some": [
+                        "nesting",
+                        "id"
+                    ]
+                }
+            }
+        ],
+        "jsx-a11y/anchor-is-valid": "off",
+        "react/function-component-definition": [
+            2,
+            {
+              "namedComponents": "arrow-function",
+              "unnamedComponents": "arrow-function"
+            }
+          ],
+          "react/jsx-props-no-spreading": "off",
+          "jsx-a11y/click-events-have-key-events":"off",
+          "jsx-a11y/no-noninteractive-element-interactions":"off",
+          "no-nested-ternary":"off",
+          "react/jsx-no-useless-fragment":"off"
+    }
+}

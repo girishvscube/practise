@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500&display=swap" rel="stylesheet">
+    <title>Proforma Invoice</title>
+    <style type="text/css">
+    body{
+        margin-top:15px;
+        margin-left:15px;
+        margin-right:15px;
+    }
+    .invoice {
+        width: 100%;
+        font-family: 'Lexend', sans-serif;
+        font-size: 8px;
+		line-height: 10px;
+    }
+    .footer{
+        font-family: 'Lexend', sans-serif;
+        font-size: 10px;
+		line-height: 12px;
+    }
+
+    .table-view {
+        border-collapse: collapse;
+        table-layout: auto;
+        width: 100%;
+    }
+
+    .price-table {
+        border-collapse: collapse;
+        table-layout: auto;
+        width: 100%;
+        text-align: center;
+        margin-top: 24px;
+    }
+
+    .price-table th {
+        background-color: #ffcd2c;
+        border: 1px solid transparent;
+        padding: 12px;
+        position: relative;
+    }
+
+    .price-table tbody tr td {
+        border: 1px solid #ccc;
+        padding: 8px 18px 8px 18px;
+    }
+
+    .table-view tbody tr td {
+        border: 1px solid #ccc;
+        padding: 8px 18px 8px 18px;
+    }
+
+    .table-view tbody tr th {
+        border: 1px solid #ccc;
+        text-align: left;
+        width: 100%;
+        padding: 8px;
+    }
+
+    .table-list {
+        padding: 0;
+        list-style: none;
+        margin: 0;
+    }
+    .table-list-invoice {
+        padding: 0;
+        list-style: none;
+        margin: 0;
+    }
+
+  
+
+    .nested-table-view {
+        border: 1px solid #ccc;
+        width: 100%;
+    }
+
+    .payment-table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .payment-table tr td {
+        border: 1px solid #ccc;
+        text-align: center;
+    }
+
+    .payment-table tr th {
+        border: 1px solid #ccc;
+    }
+
+    .delivery-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .delivery-table tr td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    </style>
+</head>
+
+<body>
+    <section class="invoice">
+        <table class="table-view">
+            <tbody>
+                <tr>
+                    <td style="font-size: 20px;padding: 10px 0 10px 0;background-color: #ffcd2c; text-align:center;" colspan="3">PROFORMA INVOICE</td>
+                </tr>
+                <tr>
+                    <td style="width:20%;text-align:center;"><img src="https://atd-admin.s3.ap-south-1.amazonaws.com/atdlogoinvoice.png" alt="ATD-LOGO" border="0"></td>
+                    <td style="width:40%">
+                        <ul class="table-list">
+                            <li><b>Address: </b>
+                                asdas87asd,<br>
+                                asdsa87asd,<br>
+                                sdasad, Gujarat
+                                875465.
+                            </li>
+                            <li><b>Phone: </b>5434543423</li>
+                            <li><b>Email:</b> sa@sad.gwsd</li>
+                            <li><b>Gst:</b> sadsa324</li>
+                        </ul>
+                    </td>
+                    <td style="width:40%">
+                        <ul class="table-list-invoice">
+                            <li><b>Invoice No</b> <span>10075</span></li>
+                            <li><b>Invoice Date</b><span>17-11-2022</span></li>
+                            <li><b>SO No.</b><span>SO10075</span></li>
+                            <li><b>Delivery time</b><span>23-11-2022,Afternoon-12:00 to 18:00</span></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p><b><u>Customer Info</u></b></p>
+                        <table>
+                            <tr>
+                                <td style="border:none;">
+                                    <ul class="table-list">
+                                        <li>wqwqeqwe</li>
+                                        <li>easdxsada</li>
+                                        <li>sadsadas, Haryana 433432.</li>
+                                    </ul>
+                                </td>
+                                <td style="border:none;">
+                                    <ul class="table-list">
+                                        <li><b>Phone: </b>5434543423</li>
+                                        <li><b>Email:</b> sa@sad.gwsd</li>
+                                        <li><b>Gst:</b> sadsa324</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td colspan="2">
+                        <p><b><u>Delivery Address</u></b></p>
+                        <ul class="table-list">
+                            <li>asdas87asd</li>
+                            <li>asdsa87asd</li>
+                            <li>sdasad,</li>
+                            <li>Gujarat 875465.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="price-table">
+            <thead>
+                <th>Sl No.</th>
+                <th>Item</th>
+                <th>Price Per Litre</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </thead>
+            <tbody style="height: 200px;vertical-align: text-top;">
+                <tr>
+                    <td style="border-width: 0px 0px 1px 1px;">1</td>
+                    <td style="border-width: 0px 0px 1px 0px;">ATD Diesel</td>
+                    <td style="border-width: 0px 0px 1px 0px;">₹ 115.5</td>
+                    <td style="border-width: 0px 0px 1px 0px;">54 Litres</td>
+                    <td style="border-width: 0px 1px 1px 0px;">₹ 6237</td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width:100%;border-collapse: collapse;">
+            <tr>
+                <td style="vertical-align: top;">
+                    <table class="nested-table-view">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p><b>Amount Chargable in Words:</b></p>
+                                    SIX THOUSAND TWO HUNDERD THIRTY-SEVEN  
+                                    <table style="width:100%;text-align: left;">
+                                        <thead style="background-color: #ffcd2c;">
+                                            <th>Terms and Conditions</th>
+                                            <th>Payment Terms</th>
+                                        </thead>
+                                        <tr>
+                                            <td style="border-width: 1px 0 1px 1px;border-style: solid;border-color: #ccc;">
+                                                <ul type="1" style="padding: 0 0 0 20px;">
+                                                    <li>N/A</li>
+                                                    
+                                                </ul>
+                                            </td>
+                                            <td style="border: 1px solid #ccc;">
+                                                <ul style="list-style: none;padding: 0 0 0 14px;">
+                                                    
+                                                    <li>N/A</li>
+                                                    <li>Amount Due: ₹ 6237</li>
+                                                    <li>Due Date: N/A</li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td>Additional Notes
+                                    <p>N/A</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td style="vertical-align: top;">
+                    <table class="delivery-table">
+                        <tr>
+                            <td>Taxable Amount: <span>₹ 6237</span></td>
+                        </tr>
+                        <tr>
+                            <td>Delivery Charges: <span>₹ 0</span></td>
+                        </tr>
+                        <tr>
+                            <td>Discount Applied 
+                                :
+                                <span> ₹ 0</span></td>
+                        </tr>
+                        <tr>
+                            <td>Total Tax : <span>Inclusive of All Taxes</span></td>
+                        </tr>
+                        <tr style="background-color:#ffcd2c">
+                            <td>Total Due Amount : <span>₹ 6237</span></td>
+                        </tr>
+                        <tr>
+                            <td style="border-width: 0 1px 0 1px;">
+                                <p style="width: 100%;text-align: center;margin: 0;"><small>Certified that Particulars Given above are True and Correct</small></p>
+                            </td>
+                        </tr>
+                        <tr>
+                             <td style="border-width: 0px 1px 1px 1px;">
+                                <p style="width: 100%;text-align: center;margin: 0;padding-top:60px">For, ANYTIMEDIESEL Pvt Ltd</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-width: 0 1px 0 1px;padding: 0 0 8px 10px;">
+                                <p style="width: 100%;margin: 0;padding-top: 50px;"><small>Authorized Signature</small></p>
+                            </td>
+                           
+                        </tr>
+                        <tr>
+                             <td style="border-width: 0px 1px 1px 1px;padding: 0 0 8px 10px;">
+                                <p style="width: 100%;margin: 0;">Date</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </section>
+</body>
+
+</html>

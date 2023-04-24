@@ -1,0 +1,1 @@
+{"version":3,"file":"Bowser.js","sourceRoot":"","sources":["../../../database/seeders/Bowser.ts"],"names":[],"mappings":";;;;;AAAA,uFAAiD;AACjD,qFAAsC;AAEtC,eAAqB,SAAQ,gBAAU;IAC5B,KAAK,CAAC,GAAG;QAEZ,MAAM,gBAAM,CAAC,MAAM,CAAC;YAChB,IAAI,EAAE,UAAU;YAChB,aAAa,EAAE,IAAI;YACnB,eAAe,EAAE,iBAAiB;YAClC,MAAM,EAAE,WAAW;YACnB,kBAAkB,EAAE,CAAC;SACxB,CAAC,CAAA;IACN,CAAC;CACJ;AAXD,4BAWC"}

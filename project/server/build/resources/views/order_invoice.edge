@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500&display=swap" rel="stylesheet">
+        <title>Invoice #{{id}}</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                font-family: 'IBM Plex Sans', sans-serif;
+                font-size: 8px;
+            }
+            .flex {
+                display: flex;
+            }
+            .main-label {
+                background-color: #ffcd2c;
+                justify-content: center;
+                font-size: 24px;
+                font-weight: bold;
+            }
+            .margin-tb-s {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            .margin-lr-s {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .padding-all-s {
+                padding: 10px;
+            }
+            .padding-tb-xs {
+                padding: 5px 0px;
+            }
+            .section-1 {
+                /* justify-content: space-between; */
+            }
+            .font-s {
+                font-size: 8px;
+            }
+            .font-m {
+                font-size: 10px;
+            }
+            .font-l {
+                font-size: 12px;
+            }
+            .label {
+                font-weight: 700;
+                letter-spacing: 1px;
+            }
+            .border-lg {
+                border-style: solid;
+                border-width: 1px;
+                border-color: lightgrey;
+            }
+
+            .border-btm-lg {
+                border-bottom-style: solid;
+                border-bottom-width: 2px;
+                border-bottom-color: lightgrey;
+            }
+            .td-txt-end {
+                text-align: end;
+            }
+            .width-30 {
+                width: 33.33%;
+            }
+            .width-60 {
+                width: 66.67%;
+            }
+            .tr-style {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 5px;
+            }
+            .label-bold {
+                font-size: 12px;
+                border-bottom-style: solid;
+                border-bottom-width: 2px;
+                font-weight: bold;
+                letter-spacing: 1px;
+            }
+            .customer-info-section {
+                justify-content: space-between;
+            }
+            .t-head {
+                background-color: #ffcd2c;
+                margin-right: 5px;
+                width: 16.67%;
+            }
+            .amount-col {
+                display: flex;
+                justify-content: space-between;
+                padding: 2px 5px;
+            }
+            .bg-primary {
+                background-color: #ffcd2c;
+            }
+        </style>
+    </head>
+
+    <body>
+        <section class="flex main-label">PERFORMA INVOICE</section>
+        <!-- first section -->
+        <section class="flex">
+            <div class="padding-all-s width-30 border-lg">
+                <svg
+                    width="28vw"
+                    height="12vh"
+                    viewBox="0 0 112 48"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <g clip-path="url(#clip0_3383_60887)">
+                        <path
+                            d="M7.33546 47.8045H10.3232L6.57771 39.2221H3.73722L-0.00390625 47.8045H2.93184L3.5034 46.3111H6.76823L7.33546 47.8045ZM4.30445 44.2274L5.13582 42.0568L5.96718 44.2274H4.30445ZM16.4068 39.2221V43.1291L13.155 39.2221H10.7821V47.8045H13.5923V43.8975L16.8485 47.8045H19.2213V39.2221H16.4068ZM28.9249 39.2221H26.1364L24.3784 42.1914L22.6464 39.2221H19.6154L22.8412 44.6528V47.8045H25.7293V44.6876L28.9249 39.2221ZM32.3889 47.8045H35.277V41.4664H37.7841V39.2221H29.8905V41.4664H32.3975L32.3889 47.8045ZM38.5332 47.8045H41.4083V39.2221H38.5245L38.5332 47.8045ZM53.082 47.8045L53.056 39.2221H50.6832L47.9769 43.8193L45.1884 39.2438H42.8155V47.8262H45.4439V44.0494L47.3058 47.0535H48.5745L50.4364 43.9148L50.458 47.8219L53.082 47.8045ZM57.3124 45.6339V44.5096H60.9323V42.4258H57.3124V41.4187H61.4346V39.2481H54.4849V47.8305H61.5991V45.66L57.3124 45.6339ZM66.3708 47.8045H70.5882C73.4504 47.8045 75.4205 46.1766 75.4205 43.5155C75.4205 40.8543 73.4504 39.2221 70.5882 39.2221H66.3708V47.8045ZM69.2546 45.5514V41.4795H70.467C71.0056 41.4795 71.5221 41.694 71.903 42.0758C72.2838 42.4576 72.4978 42.9755 72.4978 43.5155C72.4978 44.0554 72.2838 44.5733 71.903 44.9551C71.5221 45.3369 71.0056 45.5514 70.467 45.5514H69.2546ZM76.4814 47.8045H79.3695V39.2221H76.4814V47.8045ZM83.5956 45.6339V44.5096H87.2155V42.4258H83.5956V41.4187H87.7134V39.2481H80.7551V47.8305H87.8736V45.66L83.5956 45.6339ZM92.1776 48.0129C94.8319 48.0129 96.1656 46.7105 96.1656 45.1217C96.1656 41.957 91.4329 42.8165 91.4329 41.7877C91.4329 41.4925 91.7013 41.245 92.5457 41.245C93.3787 41.266 94.1949 41.4847 94.9272 41.8832L95.7932 39.7864C94.7939 39.2755 93.6846 39.019 92.563 39.0397C89.9087 39.0397 88.5794 40.3421 88.5794 41.9353C88.5794 45.1347 93.3121 44.2621 93.3121 45.3431C93.3121 45.6339 93.0177 45.8076 92.195 45.8076C91.2028 45.7889 90.2316 45.5185 89.3718 45.0218L88.4408 47.1316C89.5934 47.7325 90.8789 48.0312 92.1776 47.9999V48.0129ZM99.8634 45.6209V44.4965H103.483V42.4128H99.8634V41.4057H103.986V39.2351H97.0229V47.8175H104.141V45.647L99.8634 45.6209ZM105.254 47.7915H111.987V45.5558H108.125V39.2177H105.237L105.254 47.7915Z"
+                            fill="#011E41"
+                        />
+                        <path d="M65.128 0L60.2395 8.79949H51.3066V0H65.128Z" fill="#FFCD2C" />
+                        <path
+                            d="M111.23 16.5658C111.234 19.2751 110.569 21.9434 109.294 24.3321C107.875 26.9939 105.76 29.2188 103.177 30.7688C100.594 32.3188 97.6389 33.1355 94.6284 33.1316H88.1334C88.1171 32.6624 88.0562 32.1957 87.9515 31.7381C87.5823 30.1105 86.6881 28.6504 85.4075 27.5839C84.1269 26.5173 82.5312 25.9039 80.8676 25.8385H80.5688C78.6144 25.8415 76.737 26.6023 75.3294 27.9617C73.9218 29.3211 73.0933 31.1737 73.0173 33.1316H51.3066V33.0578L56.1519 24.3321H94.6284C96.6829 24.3321 98.6532 23.5139 100.106 22.0574C101.559 20.601 102.375 18.6256 102.375 16.5658C102.375 14.5061 101.559 12.5307 100.106 11.0742C98.6532 9.61774 96.6829 8.79951 94.6284 8.79951H63.1232L68.0118 1.37814e-05H94.6284C97.6389 -0.00386922 100.594 0.812864 103.177 2.36283C105.76 3.91281 107.875 6.1377 109.294 8.79951C110.568 11.1888 111.233 13.8567 111.23 16.5658V16.5658Z"
+                            fill="#011E41"
+                        />
+                        <path
+                            d="M17.454 20.92L15.5878 24.3322L10.7772 33.1317H0.770508L5.58115 24.3322L12.4096 11.8384L17.454 20.92Z"
+                            fill="#FFCD2C"
+                        />
+                        <path
+                            d="M48.7863 0V32.3979L48.782 33.1272L48.3749 33.1316H40.005V8.79949H26.6513L25.3566 6.46396L23.8368 3.73772L21.7627 0H48.7863Z"
+                            fill="#011E41"
+                        />
+                        <path
+                            d="M37.2685 33.1316H27.2272L22.3473 24.3321L18.9482 18.1894L13.9081 9.09474L18.8789 0.00439453L21.6155 4.93159L23.7675 8.79955L23.9234 9.08172L26.7812 14.2216L26.7899 14.2173L32.3886 24.3321L37.2685 33.1316Z"
+                            fill="#011E41"
+                        />
+                        <path
+                            d="M86.8384 33.1316H74.238C74.3409 31.5265 75.0494 30.0208 76.2196 28.9206C77.3898 27.8203 78.9339 27.208 80.5382 27.208C82.1425 27.208 83.6866 27.8203 84.8568 28.9206C86.027 30.0208 86.7355 31.5265 86.8384 33.1316V33.1316Z"
+                            fill="#FFCD2C"
+                        />
+                        <path
+                            d="M107.908 0.0258789V0.364487H107.042V3.2253H106.609V0.364487H105.743V0.0258789H107.908Z"
+                            fill="#011E41"
+                        />
+                        <path
+                            d="M111.658 0.0477466V3.22547H111.225V0.842176L110.173 3.21244H109.878L108.839 0.842176V3.21678H108.406V0.0390625H108.839L110.013 2.66545L111.186 0.0390625L111.658 0.0477466Z"
+                            fill="#011E41"
+                        />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_3383_60887">
+                            <rect width="112" height="48" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+            <div class="padding-all-s width-30 border-lg">
+                <p class="font-m">
+                    <label class="font-m label" for="Address">Address:</label>&nbsp;Lorem Ipsum is
+                    simply dummy text of the printing and typesetting industry,<br />
+                    Madhavpuram, Bangaluru, Karnataka - 560048
+                </p>
+                <p class="font-m">
+                    <label class="font-m label" for="Address">Phone:</label>&nbsp;9563214872
+                </p>
+                <p class="font-m">
+                    <label class="font-m label" for="Address">Email:</label
+                    >&nbsp;rockyshinde@scube.me
+                </p>
+                <p class="font-m">
+                    <label class="font-m label" for="Address">Website:</label>&nbsp;https://scube.me
+                </p>
+                <p class="font-m">
+                    <label class="font-m label" for="Address">GST:</label>&nbsp;GSTIN5124687442
+                </p>
+            </div>
+            <div class="padding-all-s width-30 border-lg">
+                <table style="width: 100%">
+                    <tr style="margin-top: 1em" class="tr-style">
+                        <td class="font-m label">PI No.</td>
+                        <td class="font-m td-txt-end">12345</td>
+                    </tr>
+                    <tr class="tr-style">
+                        <td class="font-m label">PI Date</td>
+                        <td class="font-m td-txt-end">13/09/2022</td>
+                    </tr>
+                    <tr class="tr-style">
+                        <td class="font-m label">So No.</td>
+                        <td class="font-m td-txt-end">12345</td>
+                    </tr>
+                    <tr class="tr-style">
+                        <td class="font-m label">Est. Delivery time</td>
+                        <td class="font-m td-txt-end">13/09/2022, 7:00-19:00</td>
+                    </tr>
+                    <tr class="tr-style">
+                        <td class="font-m label">Delivery Terms</td>
+                        <td class="font-m td-txt-end">Paid Delivery</td>
+                    </tr>
+                    <tr class="tr-style">
+                        <td class="font-m label">Payment Terms</td>
+                        <td class="font-m td-txt-end">PIA</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <!-- second section -->
+        <section class="flex">
+            <div class="padding-all-s width-60 border-lg">
+                <div>
+                    <span class="label-bold">Customer Info</span>
+                    <div class="flex customer-info-section">
+                        <div>
+                            <p class="font-l">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry,<br />
+                                Madhavpuram, Bangaluru, Karnataka - 560048
+                            </p>
+                        </div>
+                        <div>
+                            <table style="width: 100%">
+                                <tr style="margin-top: 1em" class="tr-style">
+                                    <td class="font-m label">Ph no:</td>
+                                    <td class="font-m">1234567890</td>
+                                </tr>
+                                <tr class="tr-style">
+                                    <td class="font-m label">Email Id:</td>
+                                    <td class="font-m">rockyshinde@scube.me</td>
+                                </tr>
+                                <tr class="tr-style">
+                                    <td class="font-m label">Gst:</td>
+                                    <td class="font-m">GSTIN5124687442</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="padding-all-s width-30 border-lg">
+                <span class="label-bold">Delivery Address</span>
+                <p class="font-l">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry,
+                    <br />
+                    Madhavpuram, <br />
+                    Bangaluru, <br />
+                    Karnataka - 560048
+                </p>
+            </div>
+        </section>
+        <!-- third section -->
+        <section class="flex" style="margin-top: 15px">
+            <table style="width: 100%; padding-bottom: 20px" class="border-lg">
+                <thead>
+                    <th class="font-m t-head">SI No.</th>
+                    <th class="font-m t-head">Product Name</th>
+                    <th class="font-m t-head">Price Per Litre</th>
+                    <th class="font-m t-head">Quantity</th>
+                    <th class="font-m t-head">Total</th>
+                </thead>
+                <tbody>
+                    <tr style="text-align: center">
+                        <td class="font-m">1</td>
+                        <td class="font-m">ATD Diesel</td>
+                        <td class="font-m">₹ 109.41</td>
+                        <td class="font-m">5000 Litres</td>
+                        <td class="font-m">₹ 547050</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <!-- fourth section -->
+        <section class="flex">
+            <div class="padding-tb-xs width-60 border-lg">
+                <label style="padding: 0px 10px" class="font-m label" for="amount-chargeable"
+                    >Amount Chargable in words:</label
+                >
+                <p style="padding: 0px 10px" class="font-m">
+                    Five Lakh fifty three thousand eight hundred adn seventy five only
+                </p>
+                <div
+                    class="bg-primary"
+                    style="
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-evenly;
+                        margin-top: 0px 10px;
+                    "
+                >
+                    <span class="label bg-primary border-lg" style="width: 50%; padding: 5px"
+                        >Terms and Conditions</span
+                    >
+                    <span class="label bg-primary border-lg" style="width: 50%; padding: 5px"
+                        >Payment Terms</span
+                    >
+                </div>
+                <div class="flex" style="width: 100%">
+                    <div
+                        class="border-lg font-m padding-tb-xs"
+                        style="width: 50%; padding-left: 5px"
+                    >
+                        1. Subject to out home jurisdiction. <br />
+                        2. Our Responibility ceases as soon as goods leaves our Premises. <br />
+                        3. Goods once sold will not taken back. <br />
+                        4. Delivery Ex-Premises
+                    </div>
+                    <div class="border-lg" style="width: 50%; padding-left: 8px">
+                        <p class="font-m">Pay in Advance</p>
+                        <p class="font-m">
+                            <label for="grandtotal" class="font-m label">Grand Total:</label>&nbsp;₹
+                            547050
+                        </p>
+                        <p class="font-m">
+                            <label for="grandtotal" class="font-m label">Due Date:</label
+                            >&nbsp;13/09/2022
+                        </p>
+                    </div>
+                </div>
+                <div style="padding: 8px">
+                    <label class="font-m label" for="">Additional Notes:</label>
+                    <p class="font-m">N/A</p>
+                </div>
+            </div>
+            <div class="padding-tb-xs width-30 border-lg">
+                <div class="border-btm-lg amount-col">
+                    <span class="label">Total Amount:</span>
+                    <span class="label">₹ 547050</span>
+                </div>
+                <div class="border-btm-lg amount-col">
+                    <span class="label">Delivery Charges:</span>
+                    <span class="label">₹ 500</span>
+                </div>
+                <div class="border-btm-lg amount-col">
+                    <span class="label">Discount Applied (-1%):</span>
+                    <span class="label">₹ -500</span>
+                </div>
+                <div class="border-btm-lg amount-col">
+                    <span class="label">Total Tax:</span>
+                    <span class="label">Inclusive Of All Taxes</span>
+                </div>
+                <div class="border-btm-lg amount-col">
+                    <span class="label">Grand Total</span>
+                    <span class="label">₹ 547050</span>
+                </div>
+                <div class="border-btm-lg" style="text-align: center">
+                    <p>Certified that Particulars Given above are True and Correct.</p>
+                    <br />
+                    <p>For <label for="brand" class="label">ANYTIMEDISEL Pvt. Ltd.</label></p>
+                </div>
+                <div class="" style="text-align: start; padding-left: 10px">
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <label class="label">Authorized Signature</label>
+                    <br />
+                    <label class="label">Date</label>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

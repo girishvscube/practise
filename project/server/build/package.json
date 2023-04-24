@@ -1,0 +1,80 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "node ace serve --watch",
+        "build": "node ace build --production",
+        "start": "node server.js",
+        "lint": "eslint . --ext=.ts",
+        "format": "prettier --write .",
+        "test": "node -r @adonisjs/assembler/build/register test.ts",
+        "test:coverage": "nyc npm run test"
+    },
+    "eslintConfig": {
+        "extends": [
+            "plugin:adonis/typescriptApp",
+            "prettier"
+        ],
+        "plugins": [
+            "prettier"
+        ],
+        "rules": {
+            "prettier/prettier": [
+                "error"
+            ]
+        }
+    },
+    "eslintIgnore": [
+        "build"
+    ],
+    "prettier": {
+        "trailingComma": "es5",
+        "semi": false,
+        "singleQuote": true,
+        "useTabs": false,
+        "quoteProps": "consistent",
+        "bracketSpacing": true,
+        "arrowParens": "always",
+        "printWidth": 100
+    },
+    "devDependencies": {
+        "@adonisjs/assembler": "^5.8.1",
+        "adonis-preset-ts": "^2.1.0",
+        "eslint": "^8.21.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-adonis": "^2.1.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "pino-pretty": "^9.0.0",
+        "prettier": "^2.7.1",
+        "typescript": "~4.6",
+        "youch": "^3.2.0",
+        "youch-terminal": "^2.1.4"
+    },
+    "dependencies": {
+        "@adonisjs/auth": "^8.2.1",
+        "@adonisjs/core": "^5.8.6",
+        "@adonisjs/lucid": "^18.1.0",
+        "@adonisjs/mail": "^8.1.2",
+        "@adonisjs/repl": "^3.1.11",
+        "@adonisjs/view": "^6.2.0",
+        "aws-sdk": "^2.1206.0",
+        "device-detector-js": "^3.0.3",
+        "firebase-admin": "^11.4.1",
+        "geoip-lite": "^1.4.6",
+        "html-pdf": "^3.0.1",
+        "japa": "^4.0.0",
+        "lodash": "^4.17.21",
+        "luxon": "^3.0.1",
+        "moment": "^2.29.4",
+        "mysql": "^2.18.1",
+        "number-to-words": "^1.2.4",
+        "nyc": "^15.1.0",
+        "phc-argon2": "^1.1.3",
+        "proxy-addr": "^2.0.7",
+        "reflect-metadata": "^0.1.13",
+        "source-map-support": "^0.5.21",
+        "supertest": "^6.2.4",
+        "validatorjs": "^3.22.1"
+    }
+}
