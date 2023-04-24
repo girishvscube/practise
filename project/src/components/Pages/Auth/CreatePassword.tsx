@@ -161,14 +161,7 @@ const CreatePassword = () => {
               </CustomButton>
             </form>
           </div>
-          <p className="flex gap-2 items-center text-yellow font-nunitoLight text-xs justify-center mt-7">
-            Powered By
-            {' '}
-            <span>
-              {' '}
-              <img className=" relative bottom-[2px] w-[78px]" src={scube} alt="scubelogo" />
-            </span>
-          </p>
+        
         </div>
         <div className="hidden lg:flex   justify-end">
           <img className="" src={loginlogo} alt="login" />

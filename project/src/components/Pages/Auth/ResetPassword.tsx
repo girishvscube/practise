@@ -70,18 +70,7 @@ const ResetPassword = () => {
           <Auth>
             <div className="mt-16 lg:mt-16 sm:w-[479px] w-full sm:mx-auto ">
               <PasswordSuccess />
-              <p className="flex gap-2 items-center text-yellow font-nunitoLight text-xs justify-center mt-7">
-                Powered By
-                {' '}
-                <span>
-                  {' '}
-                  <img
-                    className=" relative bottom-[2px] w-[78px]"
-                    src={scube}
-                    alt="scubelogo"
-                  />
-                </span>
-              </p>
+          
             </div>
             <div>
               <img className="" src={loginlogo} alt="login" />
@@ -184,18 +173,7 @@ const ResetPassword = () => {
                   </div>
                 </form>
               </div>
-              <p className="flex gap-2 items-center text-yellow font-nunitoLight text-xs justify-center mt-7">
-                powered by
-                {' '}
-                <span>
-                  {' '}
-                  <img
-                    className=" relative bottom-[2px] w-[78px]"
-                    src={scube}
-                    alt="scubelogo"
-                  />
-                </span>
-              </p>
+          
             </div>
             <div className="hidden lg:flex   justify-end">
               <img className="" src={loginlogo} alt="login" />
